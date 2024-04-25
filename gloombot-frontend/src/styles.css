@@ -1,0 +1,48 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; background-color: bisque !important; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.mat-toolbar.mat-primary {
+  background: tan;
+  color: #000;
+  font-family: 'almendra' !important;
+  font-size: 3rem;
+  height: 10vh;
+
+
+}
+.mat-mdc-text-field-wrapper{
+  background-color: tan !important;
+}
+
+
+@font-face {
+  font-family: 'almendra';
+  src: url('/assets/AlmendraSC-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'quintessential';
+  src: url('/assets/Quintessential-Regular.ttf');
+}
+* {
+  /* font-family: 'almendra' !important;
+ font-size: 1.4rem;
+  /* Add !important to overwrite all elements */
+}
+
+#mat-input-0 {
+  font-family: 'quintessential';
+  font-size: 1.5rem;
+}
+
+.bordered {
+
+  display: inline-block;
+    width: auto;
+  background: transparent;
+  border: 30px solid transparent;
+  border-image: url("/assets/bone.png");
+  border-image-repeat: round;
+  border-image-slice: 105;
+}

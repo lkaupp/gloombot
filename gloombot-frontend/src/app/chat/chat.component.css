@@ -1,0 +1,35 @@
+.chat-bubble{
+  background-color: floralwhite;
+  margin: 10px;
+  word-break: break-all;
+
+}
+.app-header {
+  height:  10vh;
+}
+
+.mat-toolbar-behind {
+    position: relative;
+    z-index: 1;
+}
+
+.card-body {
+  font-family: 'quintessential';
+  font-size: 2em;
+  line-height: 1.3em;
+}
+
+.card-header {
+  font-family: 'almendra';
+  font-size: 1.5rem;
+}
+
+.gloombot-avatar {
+  background-image: url('/assets/Gloombotavatar.jpeg');
+  background-size: cover;
+}
+
+.my-avatar {
+  background-image: url('/assets/myself.jpeg');
+  background-size: cover;
+}

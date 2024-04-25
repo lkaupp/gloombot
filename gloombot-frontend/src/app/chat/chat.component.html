@@ -1,0 +1,57 @@
+<div  fxFill fxLayoutAlign="space-around center">
+
+<div fxFlex="66" fxLayout="column"  fxFill>
+  <div class="bordered "  fxFlex="0 0 auto">
+		<mat-toolbar class="mat-toolbar-behind" color="primary" >
+    <span>Gloomhaven Rulebot</span>
+  </mat-toolbar>
+	</div>
+	<div  #listComponent  fxFlex fxLayout="column">
+		<cdk-virtual-scroll-viewport #virtualViewport [itemSize]="50" fxFlex  fxLayout="column" fxLayoutAlign="space-between">
+			<div *cdkVirtualFor="let message of messages; let i = index; let odd = odd" [fxLayoutAlign]="odd?'end':'start'"  [style.height]="'auto'" >
+				<mat-card  fxFill class="chat-bubble" fxFlex="66"  >
+                      <mat-card-header >
+                        <div mat-card-avatar [class]="message.author == 'GloomBot'? 'gloombot-avatar': 'my-avatar'"></div>
+                        <mat-card-title class="card-header"> {{message.author}}</mat-card-title>
+                      </mat-card-header>
+                      <mat-card-content class="card-body">
+                          {{message.text}}
+                      </mat-card-content>
+                    </mat-card>
+			</div>
+		</cdk-virtual-scroll-viewport>
+	</div>
+
+	<div  class="app-footer" fxFlex="0 0 auto">
+		<mat-form-field  color="primary" fxFill >
+      <textarea matInput (keyup.enter)="addnew($event); viewportScrollToBottom()" [(ngModel)]="text" placeholder="Question?"></textarea>
+    </mat-form-field>
+	</div>
+
+</div>
+</div>
+<!--<div fxLayoutAlign="space-around center" fxFill>
+
+<div    fxFlex="80"  fxLayout="column">
+<div #listComponent fxFill  fxFlex="66" fxLayout="column"  fxLayoutAlign="space-around center" >
+  <cdk-virtual-scroll-viewport #virtualViewport [itemSize]="50" fxFill>
+      <div fxFill *cdkVirtualFor="let message of messages; let index = index; let odd=odd; let even=even;" [fxLayoutAlign]="odd?'end':'start'"  [style.height.px]="50" >
+                    <mat-card  fxFill class="chat-bubble" fxFlex="66"  >
+                      <mat-card-header>
+                        <div mat-card-avatar class="example-header-image"></div>
+                        <mat-card-title> {{message.author}}</mat-card-title>
+                      </mat-card-header>
+                      <mat-card-content>
+                          {{message.text}}
+                      </mat-card-content>
+                    </mat-card>
+      </div>
+  	</cdk-virtual-scroll-viewport>
+</div>
+  <div fxFlex="0 0 auto">
+    <mat-form-field  fxFill >
+      <textarea matInput (keyup.enter)="messages.push({author:'me', text: $any($event.target).value}); text =''; " [(ngModel)]="text" placeholder="Question?"></textarea>
+    </mat-form-field>
+  </div>
+  </div>
+</div>-->
