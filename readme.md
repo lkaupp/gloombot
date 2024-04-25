@@ -3,6 +3,8 @@ ______
 
 An example application for retrieval augmented generation (RAG) based on LlamaIndex and Llama3 for my students.
 
+![](https://github.com/lkaupp/gloombot/gloombot.gif)
+
 Technology Stack:
 * [LLamaIndex](https://www.llamaindex.ai/)
 * [Ollama](https://ollama.com/)
